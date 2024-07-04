@@ -12,20 +12,40 @@ function resetForm() {
   document.getElementById("bookingForm").reset();
 }
 
+
+
+// Defining variable to store list of events
+
+let ListOfBooking = [];
+
+
 // Function to retrive information from HTML form 
 
-const bookedSlots = [];
+const form = document.getElementById('bookingForm');
 
-document.getElementById('bookingForm').addEventListener('submit', (e) => {
+form.addEventListener('submit', (e) => {
   e.preventDefault();
 
-  const date = document.getElementById('date');
-  const time = document.getElementById('time');
+  const dateSell = document.getElementById('dateSell').value;
+  const timeSell = document.getElementById('timeSell').value;
+  const className = document.getElementById('className').value;
+  const incubator = document.getElementById('incubator').value;
 
-  bookedSlots.push({date, time})
+  console.log(dateSell, timeSell, className, incubator);
 
-console.log(bookedSlots);
+  let event = {
+    title: className,
+    start: dateSell + 'T' + timeSell + ':00',
+    end: dateSell + 'T' + timeSell + ':00',
+  };
+
+  ListOfBooking.push(event);
+
+  console.log(ListOfBooking);
 });
+
+
+
 
 // Creating the calender - Shamir
 
@@ -38,24 +58,14 @@ document.addEventListener('DOMContentLoaded', function() {
       right: 'prev,next today'
     },
     initialView: 'dayGridMonth', 
-    events: [
-      // test
-      {
-        title: 'The Title',
-        start: '2024-07-05T00:00:00',
-        end: '2024-07-05T00:02:00'
-      }
-    ]
   });
   calendar.render();
 });
 
 var calendar = new Calendar(calendarEl, {
-  events: [
-  { // this object will be "parsed" into an Event Object
-      title: 'The Title', // a property!
-      start: '2024-06-17', // a property!
-      end: '2024-06-17' // a property! ** see important note below about 'end' **
-  }
-  ]
+  events: {
+    title: className,
+    start: dateSell + 'T' + timeSell + ':00',
+    end: dateSell + 'T' + timeSell + ':00',
+  },
   })
