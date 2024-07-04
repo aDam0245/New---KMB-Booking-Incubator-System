@@ -32,12 +32,18 @@ console.log(bookedSlots);
 document.addEventListener('DOMContentLoaded', function() {
   var calendarEl = document.getElementById('calendar');
   var calendar = new FullCalendar.Calendar(calendarEl, {
-    initialView: 'dayGridMonth',
+    headerToolbar: { // Changed from 'header' to 'headerToolbar'
+      left: 'dayGridMonth,timeGridWeek,timeGridDay',
+      center: 'title',
+      right: 'prev,next today'
+    },
+    initialView: 'dayGridMonth', 
     events: [
+      // test
       {
         title: 'The Title',
-        start: '2024-07-05',
-        end: '2024-07-05'
+        start: '2024-07-05T00:00:00',
+        end: '2024-07-05T00:02:00'
       }
     ]
   });
