@@ -37,14 +37,26 @@
             <form action="/action_page.php" class="form-container">
                 <div class="FormTopSection">
                     <h1>Book now</h1>
-                    <button type="button" class="cancel" onclick="closeForm()">X</button>
+                    <button type="button" class="cancel" onclick="closeForm()">x</button>
                 </div>
     
                 <label for="date"><b>Date</b></label>
                 <input type="date" placeholder="Select your date" name="date" required>
-            
+
+                <label for="time"><b>Time</b></label>
+                <input type="time" placeholder="Select your time" name="time" required>
+
                 <label for="class"><b>Class</b></label>
                 <input type="text" placeholder="Enter your class" name="class" required>
+
+                <label for="incubator"><b>Incubator</b></label>
+                <select name="incubator" id="incubator">
+                    <option value="placeholder">Select your incubator</option>
+                    <option value="incubatorBlue">Blue Incubator</option>
+                    <option value="incubatorYellow">Yellow Incubator</option>
+                    <option value="incubatorOut1">Outdoor Incubator 1</option>
+                    <option value="incubatorOut2">Outdoor Incubator 2</option>
+                </select>
             
                 <button type="submit" class="btn">Submit</button>
             </form>
