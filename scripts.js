@@ -4,10 +4,13 @@ function openForm() {
     document.getElementById("myForm").style.display = "block";
   }
   
-  function closeForm() {
-    document.getElementById("myForm").style.display = "none";
-  }
+function closeForm() {
+  document.getElementById("myForm").style.display = "none";
+}
 
+function resetForm() {
+  document.getElementById("bookingForm").reset();
+}
 
 // Function to retrive information from HTML form 
 
