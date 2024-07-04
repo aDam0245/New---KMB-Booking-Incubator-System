@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/x-icon" href="shop.png">
+    <title>KMB Incubator Booking System</title>
+</head>
+<body>
+    <nav class="navMenu">
+        <a href="#">Home</a>
+        <a href="#">Blog</a>
+        <a href="#">Work</a>
+        <a href="#">About</a>
+        <div class="dot"></div>
+      </nav>    
+    <main>
+        <div id="topBanner">
+            <img src="coverImage.jpg" class="coverImage" alt="An image of food truck with customers">
+            <div id="textBox">
+                <h1>KMB Incubator Booking System</h1>
+                <button class="button-52" role="button" onclick="openForm()">Book now</button>            
+            </div>
+        </div>
+        <div class="content">
+            <div class="calendar"></div>
+            <!-- <div id="sidePanel"></div> -->
+        </div>
+        <!---->
+<div class="form-popup" id="myForm">
+    <form action="/action_page.php" class="form-container">
+      <h1>Login</h1>
+  
+      <label for="email"><b>Email</b></label>
+      <input type="text" placeholder="Enter Email" name="email" required>
+  
+      <label for="psw"><b>Password</b></label>
+      <input type="password" placeholder="Enter Password" name="psw" required>
+  
+      <button type="submit" class="btn">Login</button>
+      <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+    </form>
+    </main>
+    <footer>
+        <a href="https://www.flaticon.com/free-icons/marketplace" title="marketplace icons">Marketplace icons created by DinosoftLabs - Flaticon</a>
+    </footer>
+    
+</body>
+</html>
+
