@@ -12,20 +12,25 @@ function resetForm() {
   document.getElementById("bookingForm").reset();
 }
 
+
+
 // Function to retrive information from HTML form 
 
 const bookedSlots = [];
 
-document.getElementById('bookingForm').addEventListener('submit', (e) => {
+let bookingForm = document.getElementById("bookingForm").innerHTML;
+
+bookingForm.addEventListener("submit", (e) => {
   e.preventDefault();
 
-  const date = document.getElementById('date');
-  const time = document.getElementById('time');
+  let date = document.getElementById("date").innerHTML;
+  let time = document.getElementById("time").innerHTML;
 
-  bookedSlots.push({date, time})
+
+});
 
 console.log(bookedSlots);
-});
+
 
 // Creating the calender - Shamir
 
