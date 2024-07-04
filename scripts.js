@@ -1,12 +1,23 @@
 // Function to pop up the HTML form
 
 function openForm() {
-  document.getElementById("myForm").style.display = "block";
-}
+    document.getElementById("myForm").style.display = "block";
+  }
+  
+  function closeForm() {
+    document.getElementById("myForm").style.display = "none";
+  }
 
-function closeForm() {
-  document.getElementById("myForm").style.display = "none";
-}
+
+// Function to retrive information from HTML form 
+
+const bookedSlots = [];
+
+document.getElementById('bookingForm').addEventListener('submit', (e) => {
+  e.preventDefault();
+
+  const date = document.getElementById();
+});
 
 // Creating the calender
 
@@ -25,19 +36,5 @@ var calendar = new Calendar(calendarEl, {
       start: '2024-06-17', // a property!
       end: '2024-06-17' // a property! ** see important note below about 'end' **
   }
-<<<<<<< HEAD
-  
-  function closeForm() {
-    document.getElementById("myForm").style.display = "none";
-  }
-
-
-// Function to retrive information from HTML form 
-
-const bookedSlots = [];
-
-document.getElementById()
-=======
   ]
   })
->>>>>>> 8f92fac685edfa01dee936f5b6dcaebd98d5d339
