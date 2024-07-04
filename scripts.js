@@ -16,10 +16,15 @@ const bookedSlots = [];
 document.getElementById('bookingForm').addEventListener('submit', (e) => {
   e.preventDefault();
 
-  const date = document.getElementById();
+  const date = document.getElementById('date');
+  const time = document.getElementById('time');
+
+  bookedSlots.push({date, time})
+
+console.log(bookedSlots);
 });
 
-// Creating the calender
+// Creating the calender - Shamir
 
 document.addEventListener('DOMContentLoaded', function() {
   var calendarEl = document.getElementById('calendar');
