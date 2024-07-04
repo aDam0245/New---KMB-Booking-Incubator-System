@@ -49,3 +49,13 @@ document.addEventListener('DOMContentLoaded', function() {
   });
   calendar.render();
 });
+
+var calendar = new Calendar(calendarEl, {
+  events: [
+  { // this object will be "parsed" into an Event Object
+      title: 'The Title', // a property!
+      start: '2024-06-17', // a property!
+      end: '2024-06-17' // a property! ** see important note below about 'end' **
+  }
+  ]
+  })
