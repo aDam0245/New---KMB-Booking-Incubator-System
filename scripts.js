@@ -33,11 +33,17 @@ form.addEventListener('submit', (e) => {
 
   console.log(dateSell, timeSell, className, incubator);
 
-  let event = {
+  const event = {
     title: className,
     start: dateSell + 'T' + timeSell + ':00',
     end: dateSell + 'T' + timeSell + ':00',
   };
+
+  // calendar.addEvent({
+  //   title: 'title',
+  //   start: '2024-07-05T00:00:00',
+  //   end: '2024-07-05T00:00:00',
+  // })
 
   ListOfBooking.push(event);
 
@@ -58,7 +64,22 @@ document.addEventListener('DOMContentLoaded', function() {
       right: 'prev,next today'
     },
     initialView: 'dayGridMonth', 
+    events:[
+    {
+      title: 'title',
+      start: '2024-07-05T00:00:00',
+      end: '2024-07-05T00:00:00',
+    }
+    ],
   });
+
+  calendar.addEvent({
+    title: 'title',
+    start: '2024-07-05T00:00:00',
+    end: '2024-07-05T00:00:00',
+  });
+
+
   calendar.render();
 });
 

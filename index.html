@@ -18,9 +18,9 @@
       </nav>    
     <main>
         <div id="topBanner">
-            <img src="coverImage.jpg" class="coverImage" alt="An image of food truck with customers">
+            <img src="incubatorCoverImage.jpg" class="coverImage" alt="An image of incubator with customers">
             <div id="textBox">
-                <h1>KMB Incubator Booking System</h1>
+                <h1 id="firstHeading">KMB Incubator Booking System</h1>
                 <button class="button-52" role="button" onclick="openForm()">Book now</button>            
             </div>
         </div>
@@ -61,7 +61,7 @@
                     <option value="incubatorOut2">Outdoor Incubator 2</option>
                 </select>
             
-                <button type="submit" class="btn" onclick="closeForm()" value="Reset value">Submit</button>
+                <button type="submit" class="btn" onclick="closeForm(), addEventButton()" value="Reset value">Submit</button>
             </form>
         </div>
     <script src="scripts.js"></script>

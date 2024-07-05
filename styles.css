@@ -13,12 +13,14 @@ body {
     width: 100%;
     height: 300px;
     object-fit: cover;
+    object-position: 0 35%;
 }
 
-h1 {
+#firstHeading {
     color: white;
-    text-shadow: 3px 2  px black;
+    text-shadow: 4px 2px black;
     margin-left: 10px;  
+    font-size: 300%;
 }
 
 #textBox {
@@ -134,7 +136,7 @@ h1 {
     letter-spacing: 1px;
     padding: 13px 20px 13px;
     outline: 0;
-    border: 1px solid black;
+    border: 2px solid black;
     cursor: pointer;
     position: relative  ;
     background-color: rgba(0, 0, 0, 0);
